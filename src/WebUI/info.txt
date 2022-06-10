@@ -1,0 +1,11 @@
+﻿
+-- create project Application --> CQRS shit there.
+
+-- create migrations 
+D:\rider_projects\Studier\src> dotnet ef migrations add Initial -p Infrastructure -s WebUI -o Context/Migrations
+
+D:\rider_projects\Studier\src> dotnet ef database drop -p Infrastructure -s WebUI
+D:\rider_projects\Studier\src> dotnet ef migrations remove -p Infrastructure -s WebUI
+
+-- database update
+D:\rider_projects\Studier\src> dotnet ef database update -p Infrastructure -s WebUI
